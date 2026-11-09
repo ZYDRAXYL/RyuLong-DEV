@@ -1,0 +1,63 @@
+{
+	"folders": [
+		{
+			"name": "DEV",
+			"path": "."
+		},
+		{
+			"name": "APP",
+			"path": "./RyuLong-APP"
+		},
+		{
+			"name": "SDB",
+			"path": "./RyuLong-SDB"
+		},
+		{
+			"name": "TRX",
+			"path": "./RyuLong-TRX"
+		},
+		{
+			"name": "EXE",
+			"path": "./RyuLong-EXE"
+		},
+		{
+			"name": "PWA",
+			"path": "./RyuLong-PWA"
+		},
+		{
+			"name": "PKG",
+			"path": "./RyuLong-PKG"
+		},
+		{
+			"name": "WEB",
+			"path": "./RyuLong-WEB"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"RyuLong-APP": true,
+			"RyuLong-SDB": true,
+			"RyuLong-TRX": true,
+			"RyuLong-EXE": true,
+			"RyuLong-PWA": true,
+			"RyuLong-PKG": true,
+			"RyuLong-WEB": true
+		}
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Setup: Clone & Install All Repos",
+				"type": "shell",
+				"command": "pwsh",
+				"args": [
+					"-NoProfile",
+					"-File",
+					"${workspaceFolder:DEV}/scripts/setup.ps1"
+				],
+				"problemMatcher": []
+			}
+		]
+	}
+}
